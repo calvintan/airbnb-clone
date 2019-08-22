@@ -23,16 +23,6 @@ class App extends Component {
   }
 
   render() {
-    const flat = {
-      "id": 148,
-      "name": "Trendy Apt in Buttes Montmartre",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
-      "price": 200,
-      "priceCurrency": "EUR",
-      "lat": 48.885707,
-      "lng": 2.343543
-    }
-
     return (
       <div className="app">
         <div className="main">
@@ -42,7 +32,7 @@ class App extends Component {
 
           <div className="flats">
             {this.state.flats.map((flat) => {
-              return <Flat flat={flat} />
+              return <Flat flat={flat} key={flat.id} />
             })}
           </div>
         </div>
